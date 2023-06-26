@@ -1,12 +1,18 @@
 // Const & Var /Function Global Init
 const button = document.querySelector('button');
 button.addEventListener('click', ()=>{ 
-    // Function : Create Element 
-	const createNodeElement  = (tagType, className, text ="", imgSrc) =>{
-	const nodeElement = document.createElement(tagType);
-	nodeElement.setAttribute("class", className);
-	nodeElement.setAttribute('src', imgSrc);
-	nodeElement.textContent = text;
+    // Function : Create Element : Créer un élément pour le DOM
+	const createNodeElement  = (tagType, className, text ="", imgSrc="") =>{
+		// type d'élements créé
+		const nodeElement = document.createElement(tagType);
+		// Classe(s) de l'éléments
+		nodeElement.setAttribute("class", className);
+		// url (source image) de l'élements
+		nodeElement.setAttribute('src', imgSrc);
+		// contenu textuel de l'éléments
+		nodeElement.textContent = text;
+		// retourner l'objet généré
+		return nodeElement;
     }
     
 	// create Article

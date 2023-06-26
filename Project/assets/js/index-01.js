@@ -10,10 +10,10 @@ const button = document.querySelector('button'); // cibler le button
     //Créer un élément de type tagType (ex:div) de classe(s) classNames.
     // Si une source src de valeur imgsrc et/ou un contenu textuel de valeur contentTxt, définir l'attribu à sa valeur.
 const createNodeElement = (tagType, classNames, contentTxt = "", imgsrc = "") =>{
-    const nodeElement = document.createElement(tagType);
-    nodeElement.setAttribute("class", classNames);
-    nodeElement.setAttribute('src', imgsrc);
-    nodeElement.textContent = contentTxt;
+    const nodeElement = document.createElement(tagType);    // type d'élement DOM
+    nodeElement.setAttribute("class", classNames);  //Classe de l'éléments
+    nodeElement.setAttribute('src', imgsrc);        // source de l'image (optionnel)
+    nodeElement.textContent = contentTxt;           // contenu Textuel de l'élement
     // retourner l'objet défini
     return nodeElement;
 };
