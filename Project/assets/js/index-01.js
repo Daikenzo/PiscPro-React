@@ -1,18 +1,20 @@
 // Project 01 - Index.js
 // var & const global
-let _result, _consigneMess; 
 // reference
 const button = document.querySelector('button'); // cibler le button 
 
 // Init
-init();
+// init();
 // Flexible function
     // Create Node Element
+    //Créer un élément de type tagType (ex:div) de classe(s) classNames.
+    // Si une source src de valeur imgsrc et/ou un contenu textuel de valeur contentTxt, définir l'attribu à sa valeur.
 const createNodeElement = (tagType, classNames, contentTxt = "", imgsrc = "") =>{
     const nodeElement = document.createElement(tagType);
     nodeElement.setAttribute("class", classNames);
     nodeElement.setAttribute('src', imgsrc);
     nodeElement.textContent = contentTxt;
+    // retourner l'objet défini
     return nodeElement;
 };
 // Run
@@ -54,11 +56,11 @@ function exo1(){
 
 
 
-//Init
-function init(){
-    //Reference initilisation
-// exo 1
-};
+// Init
+// function init(){
+//     //Reference initilisation
+// // exo 1
+// };
 
 // demo/Test
 function _demoTest(){
