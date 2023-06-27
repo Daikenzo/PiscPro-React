@@ -1,5 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+// Import components
+import React from 'react';      // Librairie pour créer les composants jsx
+import ReactDOM from 'react-dom/client';    // librairie pour créer des pages web en react
+// reactNative : librairie pour les mobiles
 import './index.css';
 import App from './App';
 
