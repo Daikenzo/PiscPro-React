@@ -16,5 +16,16 @@ body{
 }
 
 .container{
-    background-color: var(--background-default-alt);
+    position: relative;
+    text-align: center;
+}
+.img-container{
+    display: inline-block;
+    width: 50%;
+    position: relative;
+
+    
+}
+.img-fluid{
+    width: 100%;
 }
