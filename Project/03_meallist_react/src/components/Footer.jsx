@@ -6,7 +6,7 @@ const   Footer = () =>{
 
     return(
         <footer>
-            <div class="copyritght-container">
+            <div className="copyritght-container">
                 @copyright by Ted
             </div>
         </footer>

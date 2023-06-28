@@ -5,16 +5,18 @@ import  Header  from  './components/Header.jsx'
 import  Footer from './components/Footer';
   //Contents
 import MealList from './components/MealList';
+import MenuHero from './components/MenuHero';
 
 function App() {
   return (
-    <div className="App">
+    <> 
       <Header />
       <main>
         <MealList />
+        <MenuHero />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 

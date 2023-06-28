@@ -1,28 +1,23 @@
 import  '../css/App.css'
 import  '../css/Article.css'
 //Meal List Components
-const   MealList = () =>{
+const   MenuHero = () =>{
     const mealsListResponseFromFakeApi = [
-        {
-          id: 1,
-          title: "Poulet au légumes",
-          image: "https://assets.afcdn.com/recipe/20170609/68259_w640h486c1cx2880cy1920.webp",
-          description: "Un bon poulet avec des légumes",
-          isPublished:false,
+      {
+        title: "JCVD",
+        image:
+        "https://www.gala.fr/imgre/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fprismamedia_people.2F2017.2F06.2F30.2F7c27c579-10a2-464c-ab4d-4da173184c68.2Ejpeg/2216x1536/quality/80/jean-claude-van-damme.jpeg",
+        
         },
         {
-          id: 2,
-          title: "Boeuf bourguignon",
-          image: "https://img-3.journaldesfemmes.fr/n7hKEGA7OFGZ8KfeTewfNnrt6H8=/750x500/smart/d6db2baa728b47f8adbf30b99a957dc0/recipe-jdf/10002051.jpg",
-          description: "Un bon boeuf bourguignon",
-          isPublished:true,
+        title: "Chuck Norris",
+        image:
+        "https://static.wikia.nocookie.net/charabattles/images/e/eb/Chuck_norris.jpg/revision/latest?cb=20170412123612&path-prefix=fr",
         },
         {
-          id: 3,
-          title: "Poisson aux légumes",
-          image: "https://img-3.journaldesfemmes.fr/Zil0WjNJ6u4UOPpyv0GMGcJo53U=/750x500/smart/8efe96373ea84b73a9a04ca81a353bb5/recipe-jdf/328988.jpg",
-          description: "Un bon poisson avec des légumes",
-          isPublished:true,
+        title: "Sylverster Stallone",
+        image:
+        "https://media.gettyimages.com/photos/sylvester-stallone-in-a-scene-from-the-film-rambo-iii-1988-picture-id168583123?s=612x612",
         },
       ];
 
@@ -45,4 +40,4 @@ const   MealList = () =>{
     )
 };
 
-export  default MealList;
+export  default MenuHero;
