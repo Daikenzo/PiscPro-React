@@ -1,7 +1,8 @@
 
 // Import Elements
-import './App.css';
-import Profile from "./Profile";
+import  './css/App.css';
+import  Profile from "./Profile";
+import Articles from './Articles';
 
 function App() {
   // Main function -  app
@@ -15,6 +16,9 @@ function App() {
         </p>
         <Profile />
       </header>
+      <main class="App-body">
+        <Articles />
+      </main>
     </div>
   );
 }

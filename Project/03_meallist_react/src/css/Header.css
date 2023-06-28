@@ -1,0 +1,13 @@
+header{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: grey;
+}
+
+.Logo-contents{
+    display: inline-block;
+    margin: 2px;
+    position: relative;
+    width: 10%;
+}

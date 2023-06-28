@@ -1,7 +1,7 @@
 // profiles components
 
 import React from "react";
-import './Profile.css';
+import './css/Profile.css';
 
 // warning : toujours le nom du fichier du composant + début par une maj
 const   Profile = () =>{
