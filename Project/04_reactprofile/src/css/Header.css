@@ -1,0 +1,16 @@
+header{
+    min-width: 20vh;
+    background-color: whitesmoke;
+    display: flex;
+
+}
+.img-container *{
+    position: relative;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    width: 10rem;
+}
+
+.app-logo{
+}
