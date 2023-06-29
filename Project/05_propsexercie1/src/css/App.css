@@ -1,0 +1,17 @@
+@import url("./img-contains.css");
+@import url("./Header.css");
+
+.App {
+  text-align: center;
+}
+
+.App-Main{
+  min-height: 60vh;
+}
+
+
+
+.App-link {
+  color: #61dafb;
+}
+

@@ -1,0 +1,96 @@
+header{
+    box-shadow: 0px 12px 2px 1px rgba(0, 0, 0, 0.421);
+    padding-bottom: 1vh;
+    border-bottom: 2px solid #282c34;
+    
+}
+.header-container{
+  background: radial-gradient(ellipse at top, #e6646425, transparent),
+  radial-gradient(ellipse at bottom, #20221e1e, transparent);
+    background-color: #282c34;
+    min-height: 20vh;
+    color: white;
+}
+.App-header {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+  }
+.header-logo{
+    
+    flex-basis:content;
+}
+.site-Title{
+    flex-grow:2 ;
+}
+  .nav-menu {
+    flex: 1;
+    flex-wrap: row wrap;
+    list-style: none;
+    flex-direction: row;
+    
+  }
+  .nav-item{
+    display: inline-block;
+    margin: 0 1vh;
+    flex: 1;
+    flex-basis: auto;
+  }
+
+  .connect{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    font-style: italic;
+    font-size: small;
+  }
+  .connect span, .connect a{
+    padding: 0 5px;
+    font-weight: 700;
+  }
+
+  .connect a{
+    color: green;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 2s ease-in  green;
+    font-style: normal;
+  }
+  .connect a:hover{
+    color: goldenrod;
+    transition: 2s ease-in goldenrod;
+  }
+
+  @media  (width < 1250px){
+    .site-Title{
+      flex-grow:1 ;
+    }
+    .nav-menu {
+      flex: 0;
+      flex-basis: auto;
+      
+    }
+    .nav-item{
+      flex-basis: auto;
+      margin: 0 1vh;
+      
+    }
+  }
+
+  @media  (width < 750px){
+    .App-header, .nav-menu, .nav-item{
+      flex-direction:column;  
+    }
+    .connect{
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .connect {
+      display: inline-block;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+  }
