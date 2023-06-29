@@ -1,7 +1,24 @@
+.style-italic{
+    font-style: italic;
+}
+
+.experience-list{
+    /*max-width: 25%;*/
+    margin: 10px;
+    list-style: none;
+}
+
 .experience{
+    /*display: flex;*/
+    
     background-color: bisque;
+    padding: 0px 10px ;
 }
 
 .experience-current{
     background-color: blueviolet;
+}
+.company-name{
+    font-style: italic;
+    color:#F2450F;
 }

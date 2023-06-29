@@ -1,5 +1,9 @@
 
+.user-profile{
+    display: flex;
+    flex-direction: column;
 
+}
 .user-info *{
     text-decoration: none;
     list-style: none;

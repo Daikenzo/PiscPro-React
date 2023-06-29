@@ -39,9 +39,9 @@ const   Experiences = ()    =>{
                 return(
                     experience.isCurrent ? ( <div class="experience experience-current">
                         <div className="experience-info">
-                            <h3 className="experience-title">{experience.title} (<span id="actual-experience">  Experience Actuelle</span>):</h3>
-                            <p className="experience-info">{experience.description}</p>
-                            <p className="company-name" id={experience.company}> Company: {experience.company}</p>
+                            <h3 className="experience-title">{experience.title} <span id="actual-experience"><br />(Experience Actuelle</span>)</h3>
+                            <p className="experience-info"><strong className='style-italic'>{experience.description}</strong></p>
+                            <p className="company-name" id={experience.company}> chez <strong>{experience.company}</strong></p>
                             <div className="experience-date">De <span>{experience.startDate}</span> à  
                                 {!experience.endDate ? (" aujourd'hui") : 
                                 (<span> {experience.endDate}</span>)}
@@ -51,8 +51,8 @@ const   Experiences = ()    =>{
                     </div>) : ( <div class="experience">
                         <div className="experience-info">
                             <h3 className="experience-title">{experience.title}</h3>
-                            <p className="experience-info">{experience.description}</p>
-                            <p className="company-name" id={experience.company}> Company: {experience.company}</p>
+                            <p className="experience-info"><strong className='style-italic'>{experience.description}</strong></p>
+                            <p className="" id={experience.company}> chez <strong>{experience.company}</strong></p>
                             <div className="experience-date">De <span>{experience.startDate}</span> à  
                                 {!experience.endDate ? (" aujourd'hui") : 
                                 (<span> {experience.endDate}</span>)}

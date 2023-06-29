@@ -1,16 +1,25 @@
 header{
-    min-width: 20vh;
+    min-height: 15vh;
     background-color: whitesmoke;
+
+}
+nav{
     display: flex;
-
-}
-.img-container *{
-    position: relative;
-    text-align: center;
+    flex-direction: row;
     align-self: center;
-    align-items: center;
-    width: 10rem;
+    flex-wrap: wrap;
+    width: 80vw;
 }
+.header-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
 
-.app-logo{
+}
+.navMenu{
+    align-items: flex-end;
+    flex-flow: row;
+    list-style: none;
+    width: auto;
 }

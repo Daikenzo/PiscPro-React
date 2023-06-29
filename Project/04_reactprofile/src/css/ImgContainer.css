@@ -1,0 +1,31 @@
+.img-container *{
+    position: relative;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    width: 10rem;
+}
+
+.app-logo{
+    object-fit: cover;
+    width: 20vmin;
+    pointer-events: none;
+    max-width: 100%;
+    
+}
+.app-logo img{
+    animation: App-logo-spin infinite 20s linear;
+}
+
+
+
+/*Media & animation*/
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

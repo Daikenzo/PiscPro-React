@@ -1,16 +1,26 @@
 import  './index.css'
 import  './css/Header.css'
-import logo from './logo.svg';
+import LogoContainer from './components/LogoContainer';
 
-const   Header = () =>{
+const   Header = ({ userInfosFromFakeApi }) =>{
+    const user= {firstName:"", lastName:""}  ;
 
     return (
-        <header>
+        <header className='header-containers' id="top-Page">
             <nav className="app-website-title">
-                <div className="app-logo img-container">
-                    <img className='app-logo' src={logo}/>
+                <div className='header-title'>
+                    <LogoContainer className="Logo-img"/>
                     <h1>Dev profiler</h1>
                 </div>
+                <ul className="navMenu headerNav">
+                    <li className="menuItem headerNav">Home</li>
+                    <li className="menuItem headerNav">Contact</li>
+                    <li className="menuItem headerNav">About</li>
+
+                    <li>
+                        Connecté en tant que {userInfosFromFakeApi.firstName} {userInfosFromFakeApi.lastName}
+                    </li>
+                </ul>
             </nav>
             
         </header>
