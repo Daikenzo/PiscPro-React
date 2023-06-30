@@ -3,8 +3,14 @@ import './css/App.css';
 import  './css/Header.css'
 import  './css/Footer.css'
 
-import Header from './components/Header';
+import  Header from './components/Header';
 import  Footer from './components/Footer'
+import  Profiles from './components/Profiles';
+
+import LastCocktails from "./LastCocktails";
+import RandomCocktail from "./RandomCocktail";
+import RhumCocktailsList from "./RhumCocktailsList";
+import CocktailsList from "./CocktailsList";
 
 function App() {
   const userFromApi= {
@@ -48,17 +54,38 @@ function App() {
       price: 12,
       ingredients: ["Rhum", "Lait de coco", "Jus d'ananas"],
       isPublished: true,
+    }, {
+      id: 5,
+      name: "Bloody Mary",
+      price: 8,
+      ingredients: ["Vodka", "Jus de tomate", "Sauce Worcestershire"],
+      isPublished: true,
+    }, {
+      id: 6,
+      name: "Ti punch",
+      price: 8,
+      ingredients: ["Rhum", "Citron vert", "Sirop de canne"],
+      isPublished: true,
     }
   ];
 
   console.log(cocktailsFromApi);
+   // je filtre les cocktails pour ne garder que ceux qui sont publiés
+  // je passe cette variable à tous les composants qui en ont besoin
+  const cocktailsPublished = cocktailsFromApi.filter((cocktail) => {
+    return cocktail.isPublished;
+  });
 
   return (
     <div className="App App-background">
       <Header UserCurrent={userFromApi}/>
-      <main className="main-container App-Main " id="main-contents">
-
-      </main>
+      <main className="main-containers App-Main " id="main-contents">
+      <RandomCocktail cocktailsPublished={cocktailsPublished} />
+      <LastCocktails cocktailsPublished={cocktailsPublished} />
+      <CocktailsList cocktailsPublished={cocktailsPublished} />
+      <RhumCocktailsList cocktailsPublished={cocktailsPublished} />
+        <Profiles UserCurrent={userFromApi} />
+        </main>
       <Footer />
     </div>
   );
