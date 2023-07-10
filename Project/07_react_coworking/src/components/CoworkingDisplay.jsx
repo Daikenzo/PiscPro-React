@@ -7,7 +7,7 @@ const CoworkingDisplay = ({coworkingsApi}) =>{
     
 
     return(
-        <section className="container App-grid" id="coworking-contents">
+        <div className="container App-grid">
             
             {coworkingsApi.map((Coworking) =>{
 
@@ -31,7 +31,7 @@ const CoworkingDisplay = ({coworkingsApi}) =>{
 
                 )
             })}
-        </section>
+        </div>
     );
 };
 

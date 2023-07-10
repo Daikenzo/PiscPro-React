@@ -47,7 +47,10 @@ function App() {
     <>
       <Header siteLogo={logo} />
       <main className="main-container App-main">
+      <section className="container" id="coworking-contents">
         <CoworkingDisplay coworkingsApi={coworkingsFromFakeApi} />
+      </section>
+        
 
         <CoworkingDisplayWithRate coworkingsApi={coworkingsFromFakeApi} />
       </main>
