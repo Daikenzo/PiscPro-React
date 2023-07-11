@@ -5,10 +5,15 @@ import '../css/App.css'
 const CreateCoworking = () => {
 
      // State
+  /*    
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [address, setAddress] = useState("");
+  const [address, setAddress] = useState("");*/
 
+  const [title, setChangeTitle] = useState("");
+  const [description, setChangeDescription] = useState("");
+  const [address, setChangeAddress] = useState("");
+/*
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -16,18 +21,28 @@ const CreateCoworking = () => {
     setTitle(event.target.title.value);
     setDescription(event.target.description.value);
     setAddress(event.target.address.value);
+  };*/
+
+  const handleChangeTitle = (event) =>{
+    setChangeTitle(event.target.value);
+  };
+  const handleChangeDescription = (event) =>{
+    setChangeDescription(event.target.value);
+  };
+  const handleChangeAdress = (event) =>{
+    setChangeAddress(event.target.value);
   };
 
     return (
         <>
 
-            <form onSubmit={handleSubmit} className="form-contents App-form">
+            <form  className="form-contents App-form">
                 <label className="App-form" htmlFor="title">Nom du Coworking</label>
-                <input type="text" name="title" id="title" />
+                <input onChange={handleChangeTitle} type="text" name="title" id="title" />
                 <label htmlFor="description">Description</label>
-                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                <textarea onChange={handleChangeDescription}name="description" id="description" cols="30" rows="10"></textarea>
                 <label htmlFor="address">Adress</label>
-                <input type="text" name="address" id="dress" />
+                <input onChange={handleChangeAdress}type="text" name="address" id="adress" />
 
                 <button type="submit">Ajouter un Coworking</button>
             </form>

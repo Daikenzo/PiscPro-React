@@ -1,12 +1,15 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './css/App.css';
-import CoworkingModule from './components/CoworkingModule.jsx';
+//import CoworkingModule from './components/CoworkingModule.jsx';
+import ListCoworkings from "./components/ListCoworkings";
 
 function App() {
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <CoworkingModule />
+        <ListCoworkings />
       </header>
       <main></main>
       <footer></footer>
