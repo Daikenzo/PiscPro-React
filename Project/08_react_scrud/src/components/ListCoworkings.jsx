@@ -38,37 +38,30 @@ const ListCoworkings = () => {
         img: "https://picsum.photos/200/300",
       },
     ];
+    const [city, setCity] = useState("Bordeaux");
 
-    const [filter, setFilter] = useState(false);
-
-    const handleFilteredCityBor = () => {
-        setFilter("Bordeaux");
+    const handleClick = (value) => {
+      setCity(value);
     };
-    const handleFilteredCityMer = () => {
-        setFilter("Merignac");
-    };
-    const handleFilteredCityLor = () => {
-        setFilter("Lormont");
-    };
-    const handleFilteredCityEys = () => {
-        setFilter("Eysines");
-    };
-
-    const filteredCoworkings = coworkings.filter((coworking) => {
-        if (filter === false) {return true}
-        return coworking.address === filter;
-    })
+  
+    const cityedCoworkings = coworkings.filter((coworking) => {
+      if (city === null) {return true}
+  
+      return coworking.address === city;
+    });
+  
   
     return (
       <section>
         <h2>Liste des coworkings</h2>
   
-        <button onClick={handleFilteredCityBor}>Bordeaux</button>
-        <button onClick={handleFilteredCityMer}>Mérignac</button>
-        <button onClick={handleFilteredCityLor}>Lormont</button>
-        <button onClick={handleFilteredCityEys}>Eysines</button>
-  
-        {filteredCoworkings.map((coworking) => {
+        <button onClick={() => handleClick("Bordeaux")}>Bordeaux</button>
+        <button onClick={() => handleClick("Merignac")}>Mérignac</button>
+        <button onClick={() => handleClick("Lormont")}>Lormont</button>
+        <button onClick={() => handleClick("Eysines")}>Eysines</button>
+        <button onClick={() => handleClick(null)}>Tous</button>
+
+        {cityedCoworkings.map((coworking) => {
           return (
             <article key={coworking.id}>
               <h3>{coworking.name}</h3>
