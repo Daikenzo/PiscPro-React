@@ -28,6 +28,8 @@
   color: #61dafb;
 }
 
+
+
 .App-form{
   display: flex;
   flex-direction: column;
@@ -37,25 +39,29 @@
   flex-direction: row;
 }
 
-
-
-.App-card{
-  display: grid;
-  columns: auto/span 2;
-  justify-self: center; 
-  justify-content: center;
-
-}
-
-.App-card:only-child{
-  display: flex;
-  flex-direction: column;
-  
-}
-
-.App-form *:last-child, .App-card *:last-child{
+.App-form *:last-child{
   margin-top: 25px;
 }
+
+
+.App-card *:not(.App-card-info  *, .App-btn){
+  display: flex;
+  grid-auto-flow: column;
+  justify-self: center; 
+  justify-content: center;
+  align-items: center;
+}
+
+
+.App-card-info{
+  display: grid;
+  flex-direction: column;
+  padding-right: 20px;
+}
+
+.App-btn{
+}
+
 
 @keyframes App-logo-spin {
   from {
