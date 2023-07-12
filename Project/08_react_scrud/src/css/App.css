@@ -30,12 +30,14 @@
 
 .App-form *{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .App-form *:last-child{
   margin-top: 25px;
 }
+
+
 
 @keyframes App-logo-spin {
   from {

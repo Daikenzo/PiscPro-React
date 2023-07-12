@@ -34,7 +34,10 @@ const ContactForm = () => {
                 <button type="submit">Envoyer</button>
             </form>
             <div className="message-send">
-                { (contactData.firstName !== "" || contactData.firstName === null) && (
+                { !(contactData.firstName === "" || 
+                contactData.lastName === "" ||
+                contactData.email === ""  ||
+                contactData.message === "" ) && (
                 <p>
                     Merci de m'avoir contacté, 
                     {contactData.firstName} {contactData.lastName}
