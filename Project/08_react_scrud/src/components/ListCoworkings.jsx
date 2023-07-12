@@ -1,5 +1,6 @@
 import { useState } from "react";
 import '../css/App.css';
+import ShowCoworking from "./ShowCoworkings";
 
 const ListCoworkings = () => {
     const coworkings = [
@@ -45,9 +46,7 @@ const ListCoworkings = () => {
       setCity(value);
     };
 
-    const handleDelete = (event) =>{
-      console.log(event);
-    }
+    
 
   
     const cityedCoworkings = coworkings.filter((coworking) => {
@@ -69,13 +68,7 @@ const ListCoworkings = () => {
 
         {cityedCoworkings.map((coworking) => {
           return (
-            <article key={coworking.id} className="App-form">
-              <h3>{coworking.name}</h3>
-              <p>{coworking.address}</p>
-              <p>{coworking.phone}</p>
-              <img src={coworking.img} alt={coworking.name} />
-              <button onClick={() => handleDelete(coworking.id)} className="btn btn-delete-coworking">Suprrimer le coworking</button>
-            </article>
+            <ShowCoworking key={coworking.id} coworking={coworking}/>
           );
         })}
       </section>

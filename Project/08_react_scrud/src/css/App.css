@@ -28,9 +28,12 @@
   color: #61dafb;
 }
 
-.App-form *{
+.App-form{
   display: flex;
   flex-direction: column;
+}
+.App-form *{
+  display: grid;
 }
 
 .App-form *:last-child{
