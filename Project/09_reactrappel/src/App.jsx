@@ -15,7 +15,7 @@ function App() {
         <section className="App-container">
           <ListCategories/>
         </section>
-        <section className="App-container App-search">
+        <section className="App-container">
           <RandomMeal />
           <SearchMeals />
         </section>

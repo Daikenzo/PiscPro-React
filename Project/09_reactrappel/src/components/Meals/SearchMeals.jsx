@@ -28,25 +28,29 @@ const SearchMeals = () =>{
   }, []);
 
   return (
-    <div className="App-form search-form" id="search-form-contents">
+    <>
+      <div className="App-search search form" id="search-form-contents">
         <form onSubmit={handleSearch}>
         <input type="text" name="search" />
         <button type="submit">Search</button>
       </form>
+    </div>
+    <div className="App-card">
 
+    </div>
       {!meals ? (
         <p>No meals found</p>
       ) : (
-        <div className="App-list App-container">
+        <div className="App-container  App-card">
           {meals.map((meal) => (
-            <div key={meal.idMeal}>
+            <div className="App-card-content"key={meal.idMeal}>
               <h2>{meal.strMeal}</h2>
-              <img src={meal.strMealThumb} alt={meal.strMeal} />
+              <img className="App-card-image"src={meal.strMealThumb} alt={meal.strMeal} />
             </div>
           ))}
         </div>
       )}
-    </div>
+    </>
   );
 };
 

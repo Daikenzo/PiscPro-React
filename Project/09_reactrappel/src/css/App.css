@@ -39,21 +39,23 @@ body{
 .App-main {
   min-height: 70vh;
   display: flex;
-  
-  justify-content: space-around;
+  margin: auto 20%;
+  flex-direction: column;
+  justify-content: center;
 
 }
 .App-main section{
-    display: flex;
-    justify-content: space-between;
-    flex-basis: auto;
-    align-content: center;
-    flex-direction: column;
+  display: flex;
+  
+  flex-direction: column;
+  padding: auto 2px;
+  flex-basis: auto;
 }
 .App-container{
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  margin: 1rem auto;
+  width: 90%;
 
 }
 
@@ -61,15 +63,31 @@ body{
   display: grid;
   justify-content: center;
   flex-direction: column;
+  flex-flow: row;
 }
+
 
 
 .App-card{
   display: flex;
+  justify-content:space-around;
+  flex-wrap: wrap;
+}
+.App-card-title{
+  display: inline-block;
+  width: 100%;
   flex-direction: column;
-  align-self: auto;
-  justify-content: space-around;
-  margin:10px;;
+  flex-flow:column;
+}
+
+.App-card-content{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  align-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .App-card-image{
@@ -81,6 +99,12 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.App-search{
+  display: flex;
+  margin: 0;
+  justify-content: space-around;
+  flex-direction: row;
 }
 .search-form {
   display: flex;

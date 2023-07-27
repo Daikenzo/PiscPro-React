@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import '../css/App.css'
+import MealsByCategory from "./Meals/MealsByCategory";
 
 const ListCategories = () =>{
     const [categories, setCategories] = useState([]);
+    const [mealsByCategory, setMealsByCategory] = useState([]);
 
     const fetchCategories = async () =>{
         const categoriesResponse = await fetch("https://www.themealdb.com/api/json/v1/1/categories.php");
@@ -16,20 +19,40 @@ const ListCategories = () =>{
         fetchCategories();
     }, []);
 
+    // Category Click btn function
+    const handleCategoryClick = async (titleCategory) => {
+        const responseMeals = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${titleCategory}`);
+        const mealsByCategory = await responseMeals.json();
+    
+        setMealsByCategory(mealsByCategory.meals);
+      };
+    
+
     return(
-        <div className="App-list categories">
+        <div className="App-container App-list categories">
             <h2>Categories</h2>
-            <nav>
+            <div>
                 {categories.map((category) => {
                     return (
-                        <div className="App-card" key={category.idCategory}>
-                            <h3>{category.strCategory}</h3>
-                            <img src={category.strCategoryThumb} alt={category.strCategory} />
-                            <p>{category.strCategoryDescription}</p>
-                        </div>
+                        <nav className="App-container categories" key={category.idCategory}>
+                            <div className="App-card">
+                                <h3>{category.strCategory}</h3>
+                                <img className="App-card-image"src={category.strCategoryThumb} alt={category.strCategory} />
+                            </div>
+                            <div className="App-card App-card-content">
+                                <p className="" >{category.strCategoryDescription}</p>
+                            </div>
+                            
+                            <div className="App-card categories btn">
+                                <button onClick={() => handleCategoryClick(category.strCategory)}>
+                                    Voir toutes les recettes
+                                </button>
+                            </div>
+                        </nav>
                     );
                 })}
-            </nav>
+            </div>
+            <MealsByCategory category={mealsByCategory}/>
         </div>
     );
 };

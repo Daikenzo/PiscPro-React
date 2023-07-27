@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import '../../css/App.css'
 
 const MealsList = () => {
   const [meals, setMeals] = useState([]);
@@ -39,7 +40,7 @@ const MealsList = () => {
         </div>
       )}
 
-      <div>
+      <div className="App-content">
         {meals.map((meal) => (
           <div key={meal.idMeal}>
             <h2>{meal.strMeal}</h2>
