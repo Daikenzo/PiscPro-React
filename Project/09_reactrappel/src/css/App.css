@@ -12,6 +12,9 @@
     animation: App-logo-spin infinite 20s linear;
   }
 } */
+body{
+  background-color: whitesmoke;
+}
 
 .App-header {
   background-color: #282c34;
@@ -40,10 +43,26 @@
   justify-content: space-around;
 
 }
-.App-main:first-child{
-    justify-content: center;
+.App-main section{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: auto;
+    align-content: center;
     flex-direction: column;
 }
+.App-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.App-list{
+  display: grid;
+  justify-content: center;
+  flex-direction: column;
+}
+
 
 .App-card{
   display: flex;
