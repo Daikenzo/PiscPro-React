@@ -41,7 +41,7 @@ const SearchMeals = () =>{
       {!meals ? (
         <p>No meals found</p>
       ) : (
-        <div className="App-container  App-card">
+        <div className="App-container App-card App-search-content">
           {meals.map((meal) => (
             <div className="App-card-content"key={meal.idMeal}>
               <h2>{meal.strMeal}</h2>
