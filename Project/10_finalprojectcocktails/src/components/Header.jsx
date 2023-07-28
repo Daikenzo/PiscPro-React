@@ -29,10 +29,10 @@ const Header = () => {
               <Link to="/" className="App-link">Home</Link>
             </li>
             <li className='nav-item'>
-              <Link to="/cocktails" className="App-link">Cocktails</Link>
+              <Link to="/cocktails" className="App-link">Liste des Cocktails</Link>
             </li>
             <li className='nav-item'>
-              <Link to="/cocktails/random" className="App-link">Selection du jour</Link>
+              <Link to="/cocktails/random" className="App-link">Cocktail Roulette</Link>
             </li>
           </ul>
         </nav>

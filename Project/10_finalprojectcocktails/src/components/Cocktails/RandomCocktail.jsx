@@ -4,6 +4,7 @@ const RandomCocktail = ({HomePage}) =>{
     const FetchApi = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
     const [randomCocktail, setRandomCocktail] = useState(null);
 
+    // randomizer cocktail
     const fetchRandomCocktail = async () => {
         const responseApi = await fetch(FetchApi);
         const responseJson = await responseApi.json();
@@ -17,8 +18,10 @@ const RandomCocktail = ({HomePage}) =>{
       }, []);
     return (
         <div>
-            <h1>Random Cocktail</h1>
-            {randomCocktail ? (
+            <h1>{!HomePage? (<>randomCocktail
+            </>) : (<>Cocktail du jour</>)}</h1>
+            {// Home page -> article du jour / sinon -> random
+            randomCocktail ? (
               <div>
                 <h2>{randomCocktail.strDrink}</h2>
                   <div className="App-card-image">

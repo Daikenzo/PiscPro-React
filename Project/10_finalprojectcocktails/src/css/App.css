@@ -19,8 +19,8 @@ body{
 
 .App-header {
   background-color: #282c34;
-  min-height: 20vh;
-  padding: 10px 5%;
+  min-height: 15vh;
+  padding: 1vh 2vh;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -49,7 +49,7 @@ body{
 }
 
 .App-main {
-  min-height: 70vh;
+  min-height: 70.3vh;
   display: flex;
   margin: auto 20%;
   flex-direction: column;
@@ -117,7 +117,15 @@ body{
   display: flex;
   margin: 0;
   justify-content: space-around;
+}
+.App-search:first-child{
   flex-direction: row;
+}
+.App-search .App-card{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  
 }
 
 .search-form {
@@ -150,16 +158,18 @@ body{
   }
 }
 
-@media (max-width: 1330px){
+@media (max-width: 1830px){
+  .app-header > .App-logo{
+    flex-direction: column;
+  }
   .App-header .App-navbar {
     flex-direction: row;
+    justify-content: center;
   }
-  .App-header *:not(.App-navbar){
-
-  }
+  
 }
 
-@media (max-width: 749px) {
+@media (max-width: 949px) {
   .App-header {
     flex-direction: column;
     
