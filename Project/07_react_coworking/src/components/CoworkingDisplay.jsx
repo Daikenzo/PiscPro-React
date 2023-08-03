@@ -3,13 +3,21 @@ import '../css/App.css'
 import '../css/Main.css'
 
 
-const CoworkingDisplay = ({coworkingsApi}) =>{
-    
+const CoworkingDisplay = ({coworkingsApi, display}) =>{
+    let displayCoworking = false;
+
+    // display /State
+    //const [DisplayCoworking, setDisplayCoworkings];//
+
+
+    const handleOnClick = () =>{
+        console.log('click');
+    }
 
     return(
         <div className="container App-grid">
             
-            {coworkingsApi.map((Coworking) =>{
+            { displayCoworking && (coworkingsApi.map((Coworking) =>{
 
                 return ( <article className="coworking-item App-cards" key={Coworking.id}>
                     <div className="coworking-content App-card">
@@ -29,8 +37,9 @@ const CoworkingDisplay = ({coworkingsApi}) =>{
                     
                 </article>
 
-                )
-            })}
+                );
+            }))};
+            <button onClick={handleOnClick}>Display</button>
         </div>
     );
 };

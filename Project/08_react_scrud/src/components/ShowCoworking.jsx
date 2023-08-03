@@ -1,4 +1,5 @@
 import '../css/App.css';
+import UpdateCoworking from './UpdateCoworking';
 
 const ShowCoworking = ({coworking}) =>{
     const handleDelete = () =>{
@@ -15,8 +16,8 @@ const ShowCoworking = ({coworking}) =>{
             </div>
             <img src={coworking.img} alt={coworking.name} />
           </div>
-          
           <button onClick={handleDelete} className="btn btn-delete-coworking App-btn">Suprrimer le coworking</button>
+          <UpdateCoworking coworking={coworking} />
       </article>
     );
 };

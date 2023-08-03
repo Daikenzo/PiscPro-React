@@ -1,8 +1,8 @@
 import  '../css/App.css'
 import  '../css/Article.css'
 //Meal List Components
-const   MenuHero = () =>{
-    const mealsListResponseFromFakeApi = [
+const   ArticleHero = () =>{
+    const HeroListResponseFromFakeApi = [
       {
         title: "JCVD",
         image:
@@ -24,7 +24,7 @@ const   MenuHero = () =>{
     return  (
         <div class="container list-content" id="MealList-contents">
            {/*Boucle pour recup donnée tableau */}
-            {mealsListResponseFromFakeApi.map((article) =>  {
+            {HeroListResponseFromFakeApi.map((article) =>  {
               // si article publé, retourner du jsx
               return (
                 article.isPublished && (
@@ -40,4 +40,4 @@ const   MenuHero = () =>{
     )
 };
 
-export  default MenuHero;
+export  default ArticleHero;

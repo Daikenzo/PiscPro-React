@@ -44,9 +44,6 @@ const ShowCocktailPage = () =>{
                         <div><strong>Verre utilisé</strong> : 
                             <span> {cocktails.strGlass}</span>
                         </div>
-                        <div><strong>Verre utilisé</strong> : 
-                            <span> {cocktails.strGlass}</span>
-                        </div>
                         <div><strong>Contain Alcoholic </strong>: <span>{
                             cocktails.strAlcoholic = "Alcoholic"? 
                             <>Yes</> : <>False</>}</span>
@@ -57,13 +54,6 @@ const ShowCocktailPage = () =>{
                         
                     </div>
                 </section>
-                
-                
-                <div className="App-card">
-                    
-                
-                </div>
-                  
               </div>
             </main>
             <Footer/>

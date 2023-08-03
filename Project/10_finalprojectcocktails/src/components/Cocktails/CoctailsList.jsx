@@ -1,21 +1,23 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 
 const CoctailsList = () =>{
     const [cocktails, setCocktails] = useState([]);
     const [detailCocktail, setDetailCocktail] = useState([]);
       
     const fetchCocktails = async () => {
-      const responseApi = await fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=");
-      const responseJson = await responseApi.json();
-      console.log(responseJson.drinks)
-      setCocktails(responseJson.drinks);
+      const cocktailsResponse = await fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=");
+      const cocktailsJs = await cocktailsResponse.json();
+      console.log(cocktailsJs.drinks)
+      setCocktails(cocktailsJs.drinks);
     }
   
    const handleDetailsClick = async (idCocktail) => {
-      const responseApi = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idCocktail}`);
-      const responseJson = await responseApi.json();
+      const cocktailsResponse = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idCocktail}`);
+      const cocktailsJs = await cocktailsResponse.json();
   
-      setDetailCocktail(responseJson.Cocktails[0]);
+      setDetailCocktail(cocktailsJs.drinks[0]);
     };
   
     // Init FetchCocktails
@@ -34,12 +36,12 @@ return (
     <div App-container cocktail App-list>
         <h2>Liste des Cocktails</h2>
       
-      {detailCocktail && (
+      {/*detailCocktail  && (
         <div>
           <h2>Détails de la recette</h2>
-          <p>Cocktails.strInstructions</p>
+          <p>{cocktails.strInstructions}</p>
         </div>
-      )}
+      )*/}
 
         <div className="App-content">
           {cocktails.length === 0 && <p>Loading...</p>}
@@ -47,6 +49,15 @@ return (
             <div key={cocktail.idDrink}>
                 <h2>{cocktail.strDrink}</h2>
                 <img className="App-card-image"src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
+                <div className="App-card-content">
+                  <Link to={"/cocktails/by-category/" + cocktail.strCategory}>
+                    <p>Categorie : {cocktail.strCategory}</p>
+                  </Link>
+
+                  <Link to={"/cocktails/show/" + cocktail.idDrink}>
+                    Voir le cocktail
+                  </Link>
+                </div>
           </div>
                 ))}
             </div>

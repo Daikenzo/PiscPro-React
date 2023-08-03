@@ -42,13 +42,14 @@ function App() {
       rating: 2,
     },
   ];
+  let displayarticle = false;
 
   return (
     <>
       <Header siteLogo={logo} />
       <main className="main-container App-main">
       <section className="container" id="coworking-contents">
-        <CoworkingDisplay coworkingsApi={coworkingsFromFakeApi} />
+        <CoworkingDisplay coworkingsApi={coworkingsFromFakeApi}/>
       </section>
         
 

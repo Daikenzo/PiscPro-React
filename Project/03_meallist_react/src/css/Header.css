@@ -4,6 +4,10 @@ header{
     position: relative;
     background-color: grey;
 }
+header div img{
+    width: 60%;
+    object-fit: cover;
+}
 
 .Logo-contents{
     display: flex;
