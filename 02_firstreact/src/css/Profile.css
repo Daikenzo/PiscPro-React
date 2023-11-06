@@ -1,0 +1,26 @@
+li{
+    list-style: none;
+}
+.capitalize{
+    text-transform: uppercase;
+}
+
+.container *{
+    margin: 2px;
+    padding: 0;
+}
+
+.user-content{
+    text-align: left;
+    background-color: darkslategray;
+}
+.user-info{
+    padding: 5px 0 0 20px;
+}
+#userName{
+    font-weight: 700;
+}
+#userStaff{
+    font-style: italic;
+}
+
