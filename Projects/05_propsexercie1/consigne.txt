@@ -1,0 +1,111 @@
+EXO : 
+
+-  Créez une nouvelle application react, qui sera un blog sur les cocktails
+- Votre application doit comporter un header : 
+-- le header affiche un logo à gauche, un titre au centre et des items de menu (fake) à droite
+-- après les items de menu, il faudra afficher le nom de l'utilisateur (issu de la variable "userFromApi" plus bas).
+
+- Votre application doit afficher sous le header un coktail aléatoire issue de la variable "cocktailsFromApi" (à chaque fois que la page est rechargée, un nouveau cocktail s'affiche) (uniquement ceux publiés)
+- Votre application doit ensuite afficher les trois derniers cocktails issus de la variable "cocktailsFromApi" (uniquement ceux publiés)
+- Votre application doit ensuite afficher la liste de tous les cocktails issus de la variable ""cocktailsFromApi" (uniquement ceux publiés)
+
+- Votre application doit comporter une barre latérale avec les informations de l'utilisateur (issu de la variable "userFromApi" plus bas). 
+
+- Votre application doit comporter un footer, avec une image et les horaires d'ouverture de votre bar à cocktails (en dur)
+
+ATTENTION : 
+vous ne devez pas dupliquer les deux variables : il faut donc utiliser les props.
+
+
+  15:58 29/06/2023
+
+  const cocktailsFromApi = [
+    {
+      id: 1,
+      name: "Mojito",
+      price: 8,
+      ingredients: ["Rhum", "Menthe", "Citron vert", "Eau gazeuse"],
+      isPublished: true,
+    },
+    {
+      id: 2,
+      name: "Margarita",
+      price: 10,
+      ingredients: ["Tequila", "Triple sec", "Citron vert"],
+      isPublished: true,
+    },
+    {
+      id: 3,
+      name: "Sangria",
+      price: 6,
+      ingredients: ["Vin rouge", "Fruits", "Sucre"],
+      isPublished: false,
+    },
+    {
+      id: 4,
+      name: "Pina colada",
+      price: 12,
+      ingredients: ["Rhum", "Lait de coco", "Jus d'ananas"],
+      isPublished: true,
+    }
+  ];
+  
+
+  /* 2*/
+
+  dans l'application actuelle (cocktails) : 
+
+Au lieu de créer plusieurs fois le HTML pour afficher un cocktail (dans CocktailsList, CocktailRandom etc), créez un composant pour afficher un seul cocktail (par exemple CocktailSingle). Et utilisez ce composant dans CocktailsList, CocktailRandom.
+App.js appellera donc CocktailsList, qui lui appellera CocktailSingle.
+
+Attention, il faudra utiliser les props pour réussir cette partie.
+
+Dans App.js, remplacez la variable cocktailsFromApi par celle ci :
+
+  const cocktailsFromApi = [
+    {
+      id: 1,
+      name: "Mojito",
+      price: 8,
+      ingredients: ["Rhum", "Menthe", "Citron vert", "Eau gazeuse"],
+      isPublished: true,
+    },
+    {
+      id: 2,
+      name: "Margarita",
+      price: 10,
+      ingredients: ["Tequila", "Triple sec", "Citron vert"],
+      isPublished: true,
+    },
+    {
+      id: 3,
+      name: "Sangria",
+      price: 6,
+      ingredients: ["Vin rouge", "Fruits", "Sucre"],
+      isPublished: false,
+    },
+    {
+      id: 4,
+      name: "Pina colada",
+      price: 12,
+      ingredients: ["Rhum", "Lait de coco", "Jus d'ananas"],
+      isPublished: true,
+    }, {
+      id: 5,
+      name: "Bloody Mary",
+      price: 8,
+      ingredients: ["Vodka", "Jus de tomate", "Sauce Worcestershire"],
+      isPublished: true,
+    }, {
+      id: 6,
+      name: "Ti punch",
+      price: 8,
+      ingredients: ["Rhum", "Citron vert", "Sirop de canne"],
+      isPublished: true,
+    }
+  ];
+
+vérifiez que vos composants fonctionnent toujours correctement
+
+Créez ensuite un composant RhumCocktails. Ce composant doit recevoir en props cocktailsFromApi (comme les autres composants) depuis App.js. Mais ce composant ne doit affichez que les cocktails contenant du Rhum. Il faudra donc, dans le composant, filtrer les cocktails pour n'afficher que ceux ayant du rhum dans leurs ingrédients.
+```

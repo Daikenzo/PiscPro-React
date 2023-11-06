@@ -1,0 +1,25 @@
+header{
+    min-height: 15vh;
+    background-color: whitesmoke;
+
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 80vw;
+}
+.header-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+
+}
+.navMenu{
+    align-items: flex-end;
+    flex-flow: row;
+    list-style: none;
+    width: auto;
+}

@@ -1,0 +1,16 @@
+footer{
+    min-height: 12vh;
+    background-color: goldenrod;
+    
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+.footer-title{
+    display: flex;
+    align-items: center;
+    
+}
+.footer-logo *{
+    width: 5rem;
+}

@@ -1,0 +1,19 @@
+
+.user-profile{
+    display: flex;
+    flex-direction: column;
+
+}
+.user-info *{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    
+}
+.user-info span, .user-info ul li{
+    font-weight: 600;
+    margin-left:5px;
+}
+.user-info ul{
+    display: inline-block;
+}
