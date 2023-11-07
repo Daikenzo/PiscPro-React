@@ -1,21 +1,15 @@
-import '../css/App.css'
+import '../css/App.css';
 
 const Header = ({logo}) =>{
 
     return (
         <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+            <nav className="header-nav">
+              <ul className="App-nav">
+                <li className="nav-item"><a className="App-link" href="#"></a>TitleSite</li>
+                <li className="nav-item"><a className="App-link" href="#articles"></a>articles</li>
+              </ul>
+            </nav>
         </header>
     );
 };

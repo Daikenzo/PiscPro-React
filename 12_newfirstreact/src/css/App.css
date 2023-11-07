@@ -26,7 +26,7 @@
 
 .App-main {
   background-color: #475f8e;
-  min-height: 60vh;
+  min-height: 67.8vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,17 +36,31 @@
 }
 .App-footer {
   background-color: #282c34;
-  min-height: 14.3vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1.0vmin);
+  font-style: italic;
   color: white;
+}
+.App-nav{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+.App-nav > li {
+  padding: 1rem;
 }
 
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+}
+.App-link:hover {
+  text-decoration: underline;
 }
 
 @keyframes App-logo-spin {
