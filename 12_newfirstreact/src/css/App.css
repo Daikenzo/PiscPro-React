@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.App > :first-of-type:not(.App-header) > :first-child{
+  width:90vw;
+}
 
 .App-logo {
   height: 10vmin;
@@ -17,6 +20,30 @@
   background-color: #282c34;
   min-height: 15vh;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  width:100vw;
+}
+.App-nav {
+  align-items:center;
+  width: 80vw;
+  margin:auto 2vh;
+  padding: auto;
+  list-style: none;
+}
+
+.App-nav > li:first-of-type{
+  list-style: none;
+  margin-right: auto;
+}
+
+.App-main {
+  background-color: #475f8e;
+  min-height: 70vh;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -24,25 +51,18 @@
   color: white;
 }
 
-.App-main {
-  background-color: #475f8e;
-  min-height: 67.8vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+
 .App-footer {
   background-color: #282c34;
-  min-height: 10vh;
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 1.0vmin);
   font-style: italic;
+  margin: auto;
+  padding: auto;
   color: white;
 }
 .App-nav{
@@ -55,11 +75,12 @@
   padding: 1rem;
 }
 
-.App-link {
+.App-link{
   color: #61dafb;
-  text-decoration: none;
+  text-decoration:none;
+  list-style: none;
 }
-.App-link:hover {
+.App-link:not(.App-title):hover {
   text-decoration: underline;
 }
 
